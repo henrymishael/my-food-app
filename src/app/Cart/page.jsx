@@ -8,6 +8,11 @@ import { MdOutlineSwipeLeft } from "react-icons/md";
 import Image from 'next/image';
 import BackArrow from '../backarrow';
 import { useParams } from 'next/navigation';
+import special from '../../../public/images/special.png'
+import beans from '../../../public/images/beans.png'
+import plantain from '../../../public/images/plantain.png'
+import mac from '../../../public/images/mac.png'
+
 
 const cartPage = (params) => {
     const cartItems = getCartItems();

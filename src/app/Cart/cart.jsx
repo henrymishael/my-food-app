@@ -6,7 +6,7 @@ import react from "react";
 const items = foodList.foodItems
 
 export const getCartItems = () => {
-    
+    const items = foodList.foodItems
     const cartItems = JSON.parse(localStorage.getItem('cartItems'));
     return cartItems ? cartItems : filteredData;
 };
