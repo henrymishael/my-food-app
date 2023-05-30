@@ -1,14 +1,10 @@
 import React from 'react'
 import special from '/public/images/special.png'
-import jollof from '/public/images/beans.png'
 import beans from '/public/images/whiterice.png'
 import plantain from '/public/images/plantain.png'
 import mac from '/public/images/mac.png'
 import noodle from '/public/images/noodle.png'
-import meat from '/public/images/meat.png'
 import lettuce from '/public/images/lettuce.png'
-import ham from '/public/images/ham.png'
-import bologna from '/public/images/bologna.png'
 import burger from '/public/images/burger.png'
 
 
