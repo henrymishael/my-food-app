@@ -19,15 +19,6 @@ const foodList = {
         rating : '5.0 ⭐⭐⭐⭐⭐',
         info : 'Lorem ipsum dolor sit amet      consectetur adipisicing elit. Natus  laborum quis ut! Qui animi quaerat   voluptates! Corporis itaque vitae     laudantium in, porro accusamus hic,     saepe quod explicabo voluptatum rerum   nisi.'
     },
-    // {
-    //     id : '2',
-    //     slug: 'Jollof',
-    //     image : jollof,
-    //     name : 'Jollof Rice and Chicken',
-    //     price : '₦2,500',
-    //     rating : '3.0 ⭐⭐⭐',
-    //     info : 'Lorem ipsum dolor sit amet      consectetur adipisicing elit. Natus  laborum quis ut! Qui animi quaerat   voluptates! Corporis itaque vitae     laudantium in, porro accusamus hic,     saepe quod explicabo voluptatum rerum   nisi.'  
-    // },
     {
         id : '3',
         slug : 'beans',
@@ -46,15 +37,6 @@ const foodList = {
         rating : '5.0 ⭐⭐⭐⭐⭐',
         info : 'Lorem ipsum dolor sit amet      consectetur adipisicing elit. Natus  laborum quis ut! Qui animi quaerat   voluptates! Corporis itaque vitae     laudantium in, porro accusamus hic,     saepe quod explicabo voluptatum rerum   nisi.'
     },
-    // {
-    //     id : '5',
-    //     slug : 'ham',
-    //     image : ham,
-    //     name: 'Ham and greens',
-    //     price : '₦2,300',
-    //     rating : '4.0 ⭐⭐⭐⭐',
-    //     info : 'Lorem ipsum dolor sit amet      consectetur adipisicing elit. Natus  laborum quis ut! Qui animi quaerat   voluptates! Corporis itaque vitae     laudantium in, porro accusamus hic,     saepe quod explicabo voluptatum rerum   nisi.'
-    // },
     {
         id : '6',
         slug : 'mac',
@@ -64,24 +46,7 @@ const foodList = {
         rating : '5.0 ⭐⭐⭐⭐⭐',
         info : 'Lorem ipsum dolor sit amet      consectetur adipisicing elit. Natus  laborum quis ut! Qui animi quaerat   voluptates! Corporis itaque vitae     laudantium in, porro accusamus hic,     saepe quod explicabo voluptatum rerum   nisi.'
     },
-    // {
-    //     id : '7',
-    //     slug : 'bologna',
-    //     image : bologna,
-    //     name: 'bologna spaghetti',
-    //     price : '₦5,000',
-    //     rating : '4.0 ⭐⭐⭐⭐',
-    //     info : 'Lorem ipsum dolor sit amet      consectetur adipisicing elit. Natus  laborum quis ut! Qui animi quaerat   voluptates! Corporis itaque vitae     laudantium in, porro accusamus hic,     saepe quod explicabo voluptatum rerum   nisi.'
-    // },
-    // {
-    //     id : '8',
-    //     slug : 'meat',
-    //     image : meat,
-    //     name: 'meat and greens',
-    //     price : '₦2,000',
-    //     rating : '4.0 ⭐⭐⭐⭐',
-    //     info : 'Lorem ipsum dolor sit amet      consectetur adipisicing elit. Natus  laborum quis ut! Qui animi quaerat   voluptates! Corporis itaque vitae     laudantium in, porro accusamus hic,     saepe quod explicabo voluptatum rerum   nisi.'
-    // },
+   
     {
         id : '9',
         slug : 'burger',
