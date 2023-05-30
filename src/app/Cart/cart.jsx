@@ -5,16 +5,16 @@ import react from "react";
 
 const items = foodList.foodItems
 
+export const getCartItems = () => {
+    
+    const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+    return cartItems ? cartItems : filteredData;
+};
+
 export const addToCart = (item) => {
     const cartItems = getCartItems();
     cartItems.push(item);
     saveCartItems(cartItems);
-};
-
-export const getCartItems = () => {
-    const filteredData = []
-    const cartItems = localStorage.getItem('cartItems')
-    return cartItems ? JSON.parse(cartItems) : filteredData;
 };
 
 export const saveCartItems = (cartItems) => {

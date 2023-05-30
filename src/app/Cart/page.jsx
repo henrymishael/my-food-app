@@ -5,7 +5,6 @@ import React, { useState } from 'react'
 import {AiOutlineMinus} from "react-icons/ai";
 import {AiOutlinePlus} from "react-icons/ai";
 import { MdOutlineSwipeLeft } from "react-icons/md";
-import foodList from '../fooditems';
 import Image from 'next/image';
 import BackArrow from '../backarrow';
 import { useParams } from 'next/navigation';
