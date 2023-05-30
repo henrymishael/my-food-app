@@ -14,13 +14,10 @@ const cartPage = (params) => {
     const cartItems = getCartItems();
     const router = useParams();
 
-  const {slug} = params;
-
-const product = foodList.foodItems.find(x => x.slug === slug)
 
 const handleRemoveFromCart = () => {
-    removeFromCart(foodList);
-    alert(`${foodList.name} has been removed cart`)
+    removeFromCart(cartItems);
+    alert(`${cartItems.name} has been removed cart`)
 }
     
 
