@@ -8,10 +8,7 @@ import { MdOutlineSwipeLeft } from "react-icons/md";
 import Image from 'next/image';
 import BackArrow from '../backarrow';
 import { useParams } from 'next/navigation';
-import special from '../../../public/images/special.png'
-import beans from '../../../public/images/beans.png'
-import plantain from '../../../public/images/plantain.png'
-import mac from '../../../public/images/mac.png'
+import foodList from '../fooditems';
 
 
 const cartPage = (params) => {
@@ -20,8 +17,8 @@ const cartPage = (params) => {
 
 
 const handleRemoveFromCart = () => {
-    removeFromCart(cartItems);
-    alert(`${cartItems.name} has been removed cart`)
+    removeFromCart(foodList);
+    alert(`${foodList.name} has been removed cart`)
 }
     
 
