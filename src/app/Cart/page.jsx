@@ -10,18 +10,18 @@ import BackArrow from '../backarrow';
 
 
 
+useEffect(()=>{
+    typeof window !== "undefined"?
+    JSON.parse(
+        localStorage.getItem('cartItems') || 
+        `[{}]`
+    )
+    :null
+})
 
 const cartPage = () => {
     const cartItems = getCartItems();
 
-    useEffect(()=>{
-        typeof window !== "undefined"?
-        JSON.parse(
-            localStorage.getItem('cartItems') || 
-            `[{}]`
-        )
-        :null
-    })
 
 
 // const handleRemoveFromCart = (item) => {
