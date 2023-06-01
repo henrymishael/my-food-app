@@ -1,10 +1,18 @@
 //cart.jsx 
 import foodList from "../fooditems";
-import react from "react";
+import react, { useEffect } from "react";
 import { useState } from "react";
 
 
-
+useEffect(()=>{
+    typeof window !== "undefined"?
+    JSON.parse(
+        localStorage.getItem('cartItems') || 
+        `[{}]`
+    )
+    :null
+    
+})
 
 export const getCartItems = () => {
     
