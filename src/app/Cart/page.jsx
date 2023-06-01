@@ -17,7 +17,7 @@ useEffect(()=>{
         `[{}]`
     )
     :null
-})
+}, [])
 
 const cartPage = () => {
     const cartItems = getCartItems();

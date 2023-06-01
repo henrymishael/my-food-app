@@ -18,7 +18,7 @@ const productDetails = ({params}) => {
         `[{}]`
     )
     :null
-})
+}, [])
 
   const router = useParams();
 

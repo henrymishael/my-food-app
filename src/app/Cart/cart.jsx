@@ -11,7 +11,7 @@ useEffect(()=>{
         `[{}]`
     )
     :null
-})
+}, [])
     
 export const getCartItems = () => {
     
