@@ -4,10 +4,15 @@ import react, { useEffect } from "react";
 import { useState } from "react";
 
 
-
+useEffect(()=>{
+    typeof window !== "undefined"?
+    JSON.parse(
+        localStorage.getItem('cartItems') || 
+        `[{}]`
+    )
+    :null
+})
     
-
-
 export const getCartItems = () => {
     
     const cartItems = JSON.parse(localStorage.getItem('cartItems'));

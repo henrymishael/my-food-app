@@ -1,7 +1,7 @@
 'use client';
 import { addToCart } from '@/app/Cart/cart';
 import Image from 'next/image';
-import React from 'react'
+import React, { useEffect } from 'react'
 import {FiChevronLeft} from "react-icons/fi";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { useParams, useRouter } from 'next/navigation';
@@ -11,6 +11,14 @@ import tryAgain from '@/app/search/empty/page';
 import BackArrow from '@/app/backarrow';
 
 const productDetails = ({params}) => {
+  useEffect(()=>{
+    typeof window !== "undefined"?
+    JSON.parse(
+        localStorage.getItem('cartItems') || 
+        `[{}]`
+    )
+    :null
+})
 
   const router = useParams();
 
