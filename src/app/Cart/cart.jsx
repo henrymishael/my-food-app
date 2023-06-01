@@ -1,6 +1,7 @@
 //cart.jsx 
 import foodList from "../fooditems";
 import react from "react";
+import { useState } from "react";
 
 
 
@@ -27,6 +28,13 @@ export const removeFromCart = (cartItem) => {
     saveCartItems(filteredCart)
     
 };
+
+export const clearstorage = () => {
+    localStorage.clear()
+}
+
+
+
 
 
 

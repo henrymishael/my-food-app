@@ -13,7 +13,7 @@ import Link from 'next/link';
 
 export default function sideBar() {
   return (
-    <div className='bg-[#ffc83a] h-[100%] pl-[40px] slide-in w-[100%]'>
+    <div className='bg-[#ffc83a] min-h-screen pl-[40px] slide-in w-[100%]'>
         <div className=' text-[24px] pt-[50px] font-bold  '>
             <BackArrow />
         </div> 
@@ -37,9 +37,11 @@ export default function sideBar() {
             <span className='text-[24px]' >
                 <MdOutlineLocalOffer/>
             </span>
-            <h2 className='text-[16px] font-semibold pl-[12px]'>
-                Offer and Promo
-            </h2>
+            <Link href='../offers'>
+                <h2 className='text-[16px] font-semibold pl-[12px]'>
+                    Offer and Promo
+                </h2>
+            </Link>
         </div>
         <div className='flex flex-row py-[26px] border-b-2 border-black w-[165px]'>
             <span className='text-[24px]'>
@@ -57,10 +59,12 @@ export default function sideBar() {
                 Security
             </h2>
         </div>
-        <div className='pt-[15rem] pb-10 text-[17px] font-semibold flex flex-row'>
+        <div className='pt-20 text-[17px] font-semibold flex flex-row'>
+            <Link href=''>
             <h2>
                 Sign Out
             </h2>
+            </Link>
             <span className='text-[24px] pl-1'>
                 <BsArrowRight/>
             </span>

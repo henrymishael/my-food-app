@@ -2,14 +2,14 @@
 
 import React, { useEffect, useState } from 'react'
 import {MdOutlineDelete} from 'react-icons/md'
-//import {FiHeart} from 'react-icons/fi'
+import {FiHeart} from 'react-icons/fi'
 import Image from 'next/image'
 import foodList from '../fooditems'
 
 export default function CartItems() {
 
     const items = foodList.foodItems
-     const cartItemsQuantity = items.map((item) => JSON.stringify(`{"name": "${item.name}", "quantity": ${item.quantity}}`)) 
+    const cartItemsQuantity = items.map((item) => (`{"name": "${item.name}", "quantity": ${item.quantity}}`)) 
     const [numberOFItems, setNumberOFItems] = useState(cartItemsQuantity)
     const _INIT_VALUE = (itemName) => numberOFItems.map((item)=> {
         if(item.name === itemName){
@@ -37,13 +37,23 @@ export default function CartItems() {
             return item
         })  
         setNumberOFItems(updateCartItemQuantity)        
+        // console.log(cartItemsQuantity)
     }
     const subItemsHandler = (itemName) => {
         const updateCartItemQuantity = numberOFItems.map((item)=> {
             if(item.name === itemName){
-                if(item.quantity <= 1){  
+                if(item.quantity <= 1){
+                    removeCartItemHandler(itemName)
+                }
+                {
+                return{...item, quantity: item.quantity - 1}
+                }
+            }
+            return item
+        })  
         setNumberOFItems(updateCartItemQuantity)        
-    }}})}
+        // console.log(cartItemsQuantity)
+    }
 
     // handle if an element is clicked 
 
@@ -58,57 +68,130 @@ export default function CartItems() {
 
     const isActive = (element) => {
         return activeElement && activeElement.name === element.name;
-      }
-useEffect(() => {
-            const databaseFromLocalStorage =
-                typeof window !== "undefined"?
-                JSON.
-                parse(
-                localStorage.getItem('Cart') || `[{}]` 
-                ):null
-            databaseFromLocalStorage? setCart(databaseFromLocalStorage): null
-            
-            
-            }, []);
-    
-        console.log(typeof window !== undefined)
-    
-    
+      };
+    //   setIsActive(current => !current)
 
-    const [cart, setCart] = useState([])
-        const product = (name) =>{
-         return cart.find(a => a.name === name)
-        }
-        
-    function removeCartItemHandler(name){
-                const remainingCart = cart.filter((cartItem) => name !== cartItem.name)
-                console.log(`deleted`)
-                console.log(remainingCart)
-                window.alert(`${name} is being removed from cart`)      
-                setCart(remainingCart);
-                typeof window !== "undefined"?
-                    JSON.
-                    parse(
-                    localStorage.setItem('Cart', JSON.stringify(remainingCart))  || `[{}]`
-                    ):null
-            }
-            
-        
-            // const [orderfn, setOrderFn] = useState(
-            //     console.log(`first`)
-            // )
-            const addToOrder=()=>{
-                    if(window !== "undefined"){
-                    localStorage.setItem('Order', JSON.stringify([totalCartPrice]))         
-                ,[]  }
-                    }
+    // const swipeHandler = itemID =>{
+    //     console.log('swiped')
+    //     console.log(databaseFromLocalStorage.map((a)=> a.name).includes(undefined) || databaseFromLocalStorage.map((a)=> a.name).includes(''))
+    //     const clickedItem = cart.find((item) => item.name === itemID)
+    //     console.log(clickedItem)
+    //     setIsActive(current => !current)
+    // }
+    
+   useEffect(() => {
+        const databaseFromLocalStorage =
+            typeof window !== "undefined"?
+            JSON.
+            parse(
+            localStorage.getItem('Cart') || `[{}]` 
+            ):null
+        databaseFromLocalStorage? setCart(databaseFromLocalStorage): null
+        
+        
+        }, []);
 
-        const cartItems =
+    console.log(typeof window !== undefined)
+
+    const favoriteDatabaseFromLocalStorage =
+//  useEffect(()=>{
+    typeof window !== "undefined"?
+    JSON.parse(localStorage.getItem('Favorite') || `[{}]` 
+    ): null
+// })
+
+    const [cart, setCart] = useState([])
+    const product = (name) =>{
+     return cart.find(a => a.name === name)
+    }
+    const [favorite, setfavorite] = useState(
+        favoriteDatabaseFromLocalStorage
+        // [product]
+    )    
+    
+
+    useEffect(() => {
+        if(window !== 'undefined'){
+        localStorage.setItem('Favorite', JSON.stringify(favorite))         
+    ,[favorite]
+}})
+
+    const [LikeButton, setLikeButton] = useState(
+        LikeIcon
+    )
+    function LikeIcon(){
+        return (
+            <div>
+                <FiHeart size={30}/>
+            </div>
+        )
+    }
+    function Liked(){
+        return (
+            <div>
+                <FiHeart size={30} style={{fill:'black'}}/>
+            </div>
+        )
+    }
+    function NotLiked(){
+        return (
+            <div>
+                <FiHeart size={30} style={{color:'black'}}/>
+            </div>
+        )
+    }
+    function addToFavorite(name){
+        // console.log(favoriteDatabaseFromLocalStorage)
+        if(!favorite.map(a => a.name).includes(product(name).name)){
+            setLikeButton(Liked)
+            setfavorite([
+                ...favorite,
+                product(name)
+            ])
+            console.log(`true`)
+        
+        }else{     
+         const remainingFavorite = favorite.filter((cartItem) => name !== cartItem.name)
+         setLikeButton(NotLiked)
+         setfavorite(remainingFavorite)
+        console.log(`false`)
+            }
+    } 
+    
+    
+
+    function removeCartItemHandler(name){
+        const remainingCart = cart.filter((cartItem) => name !== cartItem.name)
+        console.log(`deleted`)
+        console.log(remainingCart)
+        window.alert(`${name} is being removed from cart`)      
+        setCart(remainingCart);
+        typeof window !== "undefined"?
+            JSON.
+            parse(
+            localStorage.setItem('Cart', JSON.stringify(remainingCart))  || `[{}]`
+            ):null
+    }
+    
+
+    // const [orderfn, setOrderFn] = useState(
+    //     console.log(`first`)
+    // )
+    const addToOrder=()=>{
+            if(window !== "undefined"){
+            localStorage.setItem('Order', JSON.stringify([totalCartPrice]))         
+        ,[]  }
+            }
+
+ 
+
+       
+    const cartItems =
     cart != null?
     cart.map((cartItem) =>
     (
-        <div  key={cartItem.name} className={`h-[auto] w-[100%] rounded-normal flex flex-col items-center   p-2 relative ${cartItem.slug == '' || cartItem.slug == undefined? `hidden`: ``} `}>
-        <div className={`h-[auto] w-[100%] rounded-normal flex items-center  bg-white  my-2 p-2 z-[2] shadow-2xl ${isActive(cartItem) && swipeState? `text-slate-600 -translate-x-[9rem] transition-all`:`transition-all`} `}>
+        <div  key={cartItem.name} className={`h-[auto] w-[100%] rounded-normal flex flex-col items-center  font-dongle p-2 relative ${cartItem.slug == '' || cartItem.slug == undefined? `hidden`: ``} `}>
+        <div className={`h-[auto] w-[100%] rounded-normal flex items-center  bg-white font-dongle my-2 p-2 z-[2] shadow-2xl ${isActive(cartItem) && swipeState? `text-slate-600 -translate-x-[9rem] transition-all`:`transition-all`} `}>
           <div className='h-[90px] w-[90px] rounded-full bg-slate-100'>
             <Image src={cartItem.url} alt={cartItem.slug} height={90} width={90}/>
         </div>
@@ -132,14 +215,14 @@ useEffect(() => {
           <div className='h-[50px] w-[50px] rounded-full bg-[#FFC83A] flex items-center justify-center'
             onClick={() => removeCartItemHandler(cartItem.name)}
           ><MdOutlineDelete size={30}/></div>
-          <div className='h-[50px] w-[50px] rounded-full bg-[#FFC83A] flex items-center justify-center'> 
-          
+          <div className='h-[50px] w-[50px] rounded-full bg-[#FFC83A] flex items-center justify-center' onClick={()=> addToFavorite(cartItem.name)}> 
+          {LikeButton}
           </div>
       </div>
       </div> 
     )):
     (
-        <div className={`h-[auto] w-[100%] rounded-normal flex flex-col items-center  p-2 relative`}>Not rendereing localStorage</div>
+        <div className={`h-[auto] w-[100%] rounded-normal flex flex-col items-center  font-dongle p-2 relative`}>Not rendereing localStorage</div>
     )
   
     const cartPrices= cart.map((cartItem) => updatedPrice(cartItem)).filter(Boolean)
@@ -155,12 +238,12 @@ useEffect(() => {
   return (
     <div className='h-[700px] w-[100vw] flex flex-col relative'>
 
-        <div className='h-[80px] w-[100%] rounded-normal flex flex-row items-center justify-around   p-2 absolute top-0 text-[25px]'>
+        <div className='h-[80px] w-[100%] rounded-normal flex flex-row items-center justify-around  font-dongle p-2 absolute top-0 text-[25px]'>
             <div>
             {`SubTotal : ₦${totalCartPrice}`}
             </div>
 
-            <button className='h-[auto] w-[90px] rounded-normal flex flex-col items-center  p-2 text-[10px] bg-slate-500 border-slate-500 border-solid border-2 my-10 hover:bg-white' onClick={addToOrder}>
+            <button className='h-[auto] w-[90px] rounded-normal flex flex-col items-center  font-dongle p-2 text-[10px] bg-slate-500 border-slate-500 border-solid border-2 my-10 hover:bg-white' onClick={addToOrder}>
             save order
             </button>
 
@@ -174,3 +257,4 @@ useEffect(() => {
     </div>
   )
 }
+

@@ -34,7 +34,7 @@ const productDetails = ({params}) => {
 return(
   
    
-    <div key={product.id} className='bg-white h-screen w-[100%] pt-[2.5rem] px-6'>
+    <div key={product.id} className='bg-white min-h-screen w-[100%] pt-[2.5rem] px-6'>
       <div className=' h-auto text-2xl flex flex-row  justify-between w-[100%]  m-auto'> 
           <BackArrow/>
           <MdOutlineFavoriteBorder/>

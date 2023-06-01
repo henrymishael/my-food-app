@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function () {
   return (
-    <div className='bg-[#f5f5f8] h-screen w-[100%] pt-10 px-8'>
+    <div className='bg-[#f5f5f8] min-h-screen w-[100%] pt-10 px-8'>
         <div className='flex flex-row min-w-[186px] justify-between  text-[24px]'>
             <BackArrow/>
             <h1 className=' mt-[-2px] m-auto font-semibold text-[18px]'>Address</h1>
@@ -31,8 +31,8 @@ export default function () {
                 </span>
             </div>
         </div>
-        <div className=' flex justify-center  text-[#ffffff]  translate-y-[400%] '>
-          <Link href='./Account/Login'>
+        <div className=' flex justify-center  text-[#ffffff]  py-10 '>
+          <Link href='./checkout'>
             <button className='w-[314px] h-[70px] lg:h-[80px] lg:w-[360px] xl:w-[380px] xl:h-[85px] rounded-[30px] bg-[#ffc83a] hover:bg-[#ffffff] hover:text-[#ffc83a] hover:border-white hover:border-2'>Confirm Address</button>
           </Link>
         </div>

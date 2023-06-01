@@ -1,5 +1,5 @@
 'use client';
-import { getCartItems, removeFromCart } from './cart';
+import { getCartItems, removeFromCart,clearstorage } from './cart';
 import Link from 'next/link'
 import React, { useState } from 'react'
 import {AiOutlineMinus} from "react-icons/ai";
@@ -7,26 +7,26 @@ import {AiOutlinePlus} from "react-icons/ai";
 import { MdOutlineSwipeLeft } from "react-icons/md";
 import Image from 'next/image';
 import BackArrow from '../backarrow';
-import { useParams } from 'next/navigation';
-import foodList from '../fooditems';
 
 
-const cartPage = (params) => {
+
+
+const cartPage = () => {
     const cartItems = getCartItems();
-    const router = useParams();
 
 
-const handleRemoveFromCart = () => {
-    removeFromCart(foodList);
-    alert(`${foodList.name} has been removed cart`)
-}
+// const handleRemoveFromCart = (item) => {
+//     removeFromCart(item);
+//     alert(`${item.name} has been removed cart`)
+// }
+
     
 
 const [count, setCount] = useState(1)
 const cartDisplay = cartItems.map((item) => (
         <div key = {item.id} className='w-[314px] h-[102px] bg-white m-auto mt-[18px] rounded-[20px] flex flex-row shadow-2xl'>
             <div  className='align-middle translate-y-[15%] pl-[16px]'>
-                <Image src={item.image} alt='' width='70' height='70' />
+                <Image src={item.image} alt={item.name} width='70' height='70' />
             </div>
             <div className='flex flex-col place-content-center text-center text-[17px] font-semibold h-[100%]'>
                 <h2>{item.name && item.name.length > 15 ? item.name.substring(0,15) + '...' : item.name}</h2>
@@ -36,7 +36,7 @@ const cartDisplay = cartItems.map((item) => (
                 <div className='p-[.1rem] flex flex-row justify-center w-[52px] bg-[#ffc83a] h-[20px] rounded-[30px] translate-y-[280%] ' >
                 <button onClick = {() =>{setCount(count + 1)}} className='text-[15px] font-bold'>      <AiOutlinePlus/>
                 </button>
-                <h2 className='px-1 flex items-center text-[15px] font-bold'>{count > 0 ? count : handleRemoveFromCart(item.name)}</h2>
+                <h2 className='px-1 flex items-center text-[15px] font-bold'>{count < 0 ? removeFromCart(item.id) : count}</h2>
                 <button onClick = {() => {setCount(count - 1)}} className='text-[15px] font-bold'>
                     <AiOutlineMinus/>
                 </button>
@@ -58,9 +58,9 @@ const cartDisplay = cartItems.map((item) => (
             <h2 className='text-[10px]'>Swipe on an item to delete</h2>
         </div>
             {cartDisplay}
-        <div className='flex justify-center  text-white translate-y-[500%]'>
-            <Link href='./Cart'>
-              <button className='w-[314px] h-[70px] rounded-[30px] bg-[#ffc83a] hover:bg-white hover:text-[#ffc83a] hover:border-[#413e39]  hover:border-2 '>Add to Cart</button>
+        <div className='flex justify-center  text-white py-20'>
+            <Link href='./Address'>
+              <button className='w-[314px] h-[70px] rounded-[30px] bg-[#ffc83a] hover:bg-white hover:text-[#ffc83a] hover:border-[#413e39]  hover:border-2 '>Order Now</button>
             </Link>
         </div>
     </div>

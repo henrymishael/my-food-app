@@ -16,7 +16,7 @@ export default function page() {
     <div  key={foodItem.id} className=' flex flex-col items-center text-center h-[321px] w-[220px] mt-[50px] ml-[50px] bg-transparent'>
         <div className=' w-[164px] h-[164px] rounded-[100%] bg-transparent mb-[-113px] z-[1]'>
             <Link  href={`/details/${foodItem.slug}`}>
-                <Image className='w-[100%] h-[100%]' src={foodItem.image} alt='' /></Link>
+                <Image className='w-[100%] h-[100%]' src={foodItem.image} alt={foodItem.name} /></Link>
         </div>
         <div className='  flex text-center  w-[220px] h-[270px] bg-white rounded-[30px] '> 
             <div className='translate-y-[50%] m-auto text-center   font-semibold'>
@@ -27,12 +27,14 @@ export default function page() {
     </div> 
         ))
 return (
-    <div className='w-[100%] h-[100%] pt-[2.5rem]'>
+    <div className='w-[100%] min-h-screen pt-[2.5rem]'>
         <div className=' text-2xl flex flex-row justify-between m-auto w-[100%] px-8 '>
             <Link href='./Homepage/Sidebar'>
                 <RxHamburgerMenu/>
             </Link>
-            <CgShoppingCart/>
+            <Link href='../../Cart'>
+                <CgShoppingCart/>
+            </Link>
         </div>
         <div>
             <h1 className='size text-[34px] font-cabin text-black font-bold ml-[50px] mt-[43px]'>Delicious <br/>food for you

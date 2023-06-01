@@ -44,7 +44,7 @@ const search = () => {
         onClick={() => handleProductClick (foodlist.info)}>
           <div className=' w-[128px] h-[128px] rounded-[100%] bg-transparent mb-[-89px] z-[1]'>
             <Link href={`./details/${foodlist.slug}`}>
-              <Image className='w-[100%] h-[100%]' src={foodlist.image} alt='' />
+              <Image className='w-[100%] h-[100%]' src={foodlist.image} alt={foodlist.name} />
             </Link>
           </div>
           <div className='  flex text-center  min-w-[156px] min-h-[212px] bg-white rounded-[30px] '> 
@@ -60,7 +60,7 @@ const search = () => {
   
   return ( 
     
-      <div className='pt-[3.75rem] w-[100%] h-screen' > 
+      <div className='pt-[3.75rem] w-[100%] min-h-screen' > 
         <div className='flex flex-row pl-[2.5rem] w-[100%] move-up'>
 
             <div className='text-2xl 
@@ -73,7 +73,7 @@ const search = () => {
         </div>
        
       </div>
-      <div className=' flex flex-col items-center w-[100%] h-[83%] mt-8 bg-[#f9f9f9] rounded-tr-[30px] rounded-tl-[30px] move-up'>
+      <div className=' flex flex-col items-center w-[100%] min-h-[83%] mt-8 bg-[#f9f9f9] rounded-tr-[30px] rounded-tl-[30px] move-up'>
         {searchInput.length > 1 ?(
           <h1 className='mt-[35px] text-[28px] font-bold'>
             {filteredResults.length == 1 ? `Found ${filteredResults.length} result`:
