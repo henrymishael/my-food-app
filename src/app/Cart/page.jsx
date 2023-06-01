@@ -1,7 +1,8 @@
 'use client';
 import { getCartItems, removeFromCart,clearstorage } from './cart';
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import  { useState } from 'react'
+import { useEffect } from 'react';
 import {AiOutlineMinus} from "react-icons/ai";
 import {AiOutlinePlus} from "react-icons/ai";
 import { MdOutlineSwipeLeft } from "react-icons/md";
@@ -10,14 +11,7 @@ import BackArrow from '../backarrow';
 
 
 
-useEffect(()=>{
-    typeof window !== "undefined"?
-    JSON.parse(
-        localStorage.getItem('cartItems') || 
-        `[{}]`
-    )
-    :null
-}, [])
+
 
 const cartPage = () => {
     const cartItems = getCartItems();
@@ -29,6 +23,14 @@ const cartPage = () => {
 //     alert(`${item.name} has been removed cart`)
 // }
 
+useEffect(()=>{
+    typeof window !== "undefined"?
+    JSON.parse(
+        localStorage.getItem('cartItems') || 
+        `[{}]`
+    )
+    :null
+}, [])
     
 
 const [count, setCount] = useState(1)
