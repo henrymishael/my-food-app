@@ -1,7 +1,7 @@
 'use client';
 import { getCartItems, removeFromCart,clearstorage } from './cart';
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {AiOutlineMinus} from "react-icons/ai";
 import {AiOutlinePlus} from "react-icons/ai";
 import { MdOutlineSwipeLeft } from "react-icons/md";
