@@ -12,39 +12,39 @@ const foodList = {
     foodItems: [
     {
         id: '1',
-        slug: 'basmatic',
+        slug: 'special',
         image : special,
         name: 'Basmatic Fried Rice and Turkey',
-        price : '₦3,000',
+        price : 3000,
         rating : '5.0 ⭐⭐⭐⭐⭐',
-        info : 'Lorem ipsum dolor sit amet      consectetur adipisicing elit. Natus  laborum quis ut! Qui animi quaerat   voluptates! Corporis itaque vitae     laudantium in, porro accusamus hic,     saepe quod explicabo voluptatum rerum   nisi.'
+        quantity : 1
     },
     {
         id : '2',
         slug : 'beans',
         image : beans,
         name: 'Rice and Beans',
-        price : '₦2,000',
+        price : 2000,
         rating : '4.0 ⭐⭐⭐⭐',
-        info : 'Lorem ipsum dolor sit amet      consectetur adipisicing elit. Natus  laborum quis ut! Qui animi quaerat   voluptates! Corporis itaque vitae     laudantium in, porro accusamus hic,     saepe quod explicabo voluptatum rerum   nisi.'
+        quantity : 1
     },
     {
         id : '3',
         slug : 'plantain',
         image : plantain,
         name: 'Jollof Rice With plantain',
-        price : '₦3,500',
+        price : 3500,
         rating : '5.0 ⭐⭐⭐⭐⭐',
-        info : 'Lorem ipsum dolor sit amet      consectetur adipisicing elit. Natus  laborum quis ut! Qui animi quaerat   voluptates! Corporis itaque vitae     laudantium in, porro accusamus hic,     saepe quod explicabo voluptatum rerum   nisi.'
+        quantity : 1
     },
     {
         id : '4',
         slug : 'mac',
         image : mac,
         name: 'mac and cheese',
-        price : '₦4,000',
+        price : 4000,
         rating : '5.0 ⭐⭐⭐⭐⭐',
-        info : 'Lorem ipsum dolor sit amet      consectetur adipisicing elit. Natus  laborum quis ut! Qui animi quaerat   voluptates! Corporis itaque vitae     laudantium in, porro accusamus hic,     saepe quod explicabo voluptatum rerum   nisi.'
+        quantity : 1
     },
    
     {
@@ -52,27 +52,27 @@ const foodList = {
         slug : 'burger',
         image : burger,
         name: 'Chicken burger',
-        price : '₦1,500',
+        price : 1500,
         rating : '5.0 ⭐⭐⭐⭐⭐',
-        info : 'Lorem ipsum dolor sit amet      consectetur adipisicing elit. Natus  laborum quis ut! Qui animi quaerat   voluptates! Corporis itaque vitae     laudantium in, porro accusamus hic,     saepe quod explicabo voluptatum rerum   nisi.'
+        quantity : 1
     },
     {
         id : '6',
         slug : 'lettuce',
         image : lettuce,
         name: 'lettuce and rice',
-        price : '₦2,000',
+        price : 2000,
         rating : '4.0 ⭐⭐⭐⭐',
-        info : 'Lorem ipsum dolor sit amet      consectetur adipisicing elit. Natus  laborum quis ut! Qui animi quaerat   voluptates! Corporis itaque vitae     laudantium in, porro accusamus hic,     saepe quod explicabo voluptatum rerum   nisi.'
+        quantity : 1
     },
     {
         id : '7',
         slug : 'noodle',
         image : noodle,
         name: 'Ramen with kimchi',
-        price : '₦2,000',
+        price : 2000,
         rating : '4.0 ⭐⭐⭐⭐',
-        info : 'Lorem ipsum dolor sit amet      consectetur adipisicing elit. Natus  laborum quis ut! Qui animi quaerat   voluptates! Corporis itaque vitae     laudantium in, porro accusamus hic,     saepe quod explicabo voluptatum rerum   nisi.'
+        quantity : 1
     },
 
 ]

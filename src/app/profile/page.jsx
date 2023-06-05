@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export default function page() {
   return (
-    <div className='bg-[#f5f5f8] h-screen w-[100%] pt-8 px-8'>
+    <div className='bg-[#f5f5f8] min-h-screen w-[100%] pt-8 px-8'>
         <div className='flex flex-row min-w-[186px] justify-between  text-[24px]'>
             <BackArrow/>
         </div>
@@ -32,9 +32,7 @@ export default function page() {
             </div>
             <div className='flex flex-col justify-center
             '>
-                <h1 className='text-[18px] font-semibold'>
-                    Henry Mishael
-                </h1>
+                <input className='border-b-[1px] border-black outline-none' type="text" placeholder='Henry Mishael'  />
                 <span className='min-w-[165px] border-black border-b-[0.5px] py-1'>
                     <h2 className='text-[11px]'>Henrymishael.hm@gmail.com</h2>
                 </span>

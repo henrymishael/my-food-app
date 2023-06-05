@@ -13,7 +13,7 @@ import Link from 'next/link';
 
 export default function sideBar() {
   return (
-    <div className='bg-[#ffc83a] min-h-screen pl-[40px] slide-in w-[100%]'>
+    <div className='bg-[#ffc83a] h-[100%] pl-[40px] slide-in w-[100%]'>
         <div className=' text-[24px] pt-[50px] font-bold  '>
             <BackArrow />
         </div> 
@@ -59,7 +59,7 @@ export default function sideBar() {
                 Security
             </h2>
         </div>
-        <div className='pt-20 text-[17px] font-semibold flex flex-row'>
+        <div className='pt-[15rem] pb-10 text-[17px] font-semibold flex flex-row'>
             <Link href=''>
             <h2>
                 Sign Out

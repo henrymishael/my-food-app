@@ -44,7 +44,7 @@ const search = () => {
         onClick={() => handleProductClick (foodlist.info)}>
           <div className=' w-[128px] h-[128px] rounded-[100%] bg-transparent mb-[-89px] z-[1]'>
             <Link href={`./details/${foodlist.slug}`}>
-              <Image className='w-[100%] h-[100%]' src={foodlist.image} alt={foodlist.name} />
+              <Image className='w-[100%] h-[100%]' src={foodlist.image} alt='' />
             </Link>
           </div>
           <div className='  flex text-center  min-w-[156px] min-h-[212px] bg-white rounded-[30px] '> 

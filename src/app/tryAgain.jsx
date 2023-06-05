@@ -6,10 +6,10 @@ import BackArrow from '@/app/backarrow';
 
 export default function tryAgain() {
   return (
-    <div className='h-screen w-[100%] bg-white pt-10 '>
+    <div className='h-screen min-w-[100vw] bg-white pt-10' >
         <div className='flex flex-row'>
             <div className='text-2xl 
-                 pt-4 pl-[40px]'>
+                 pt-4  '>
                 <BackArrow/>
             </div>
             <div className='flex flex-row items-center  w-[100%] bg-transparent rounded-[30px]  m-auto'>
@@ -23,7 +23,7 @@ export default function tryAgain() {
             <h3 className='text-[17px] text-center pt-[16px] leading-[1.2em] '>Try searching the item with<br/>
             a different keyword</h3>
         </div>
-        
-    </div>
+    </div>    
+    
   )
 }

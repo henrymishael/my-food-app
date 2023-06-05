@@ -1,47 +1,54 @@
 'use client';
-import { addToCart } from '@/app/Cart/cart';
 import Image from 'next/image';
-import React, { useEffect } from 'react'
-import {FiChevronLeft} from "react-icons/fi";
+import React, { useState } from 'react'
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { useParams, useRouter } from 'next/navigation';
 import foodList from '@/app/fooditems';
 import Link from 'next/link';
-import tryAgain from '@/app/search/empty/page';
 import BackArrow from '@/app/backarrow';
+import { useRecoilState } from 'recoil';
+import { cartState } from '@/app/atoms/cartState';
+
 
 const productDetails = ({params}) => {
-  useEffect(()=>{
-    typeof window !== "undefined"?
-    JSON.parse(
-        localStorage.getItem('cartItems') || 
-        `[{}]`
-    )
-    :null
-}, [])
-
+  const [cartItem, setCartItem] = useRecoilState(cartState)
+ 
+ 
   const router = useParams();
 
   const {slug} = params;
   const product = foodList.foodItems.find(x => x.slug === slug);
+
+
+
+
+
   if (!product){
     return (
       <>
-        <tryAgain />
+        Not found
       </>
     )
   }
 
-  const handleAddToCart = (item) => {
-    addToCart(product);
-    alert(`${product.name} has been added to cart`)
+  const addItemToCart = () => {
+    if(cartItem.findIndex(pro => pro.id === product.id) === -1){
+      setCartItem(prevState => [...prevState, product])
+      alert(`${product.name} has been added to cart`)
+    }else{
+      setCartItem(prevState => {
+      return prevState.map((item) => {
+        return item.id === product.id ? {...item, quantity: item.quantity + 1} : item
+      })
+    })
   }
-  
+  }
 
-  
-return(
-  
-   
+
+
+
+
+  return(
     <div key={product.id} className='bg-white min-h-screen w-[100%] pt-[2.5rem] px-6'>
       <div className=' h-auto text-2xl flex flex-row  justify-between w-[100%]  m-auto'> 
           <BackArrow/>
@@ -69,13 +76,11 @@ return(
       </div>
       <div className='flex justify-center  text-white '>
             <Link href='./Cart'>
-              <button onClick={handleAddToCart} className='w-[314px] h-[70px] rounded-[30px] bg-[#ffc83a] hover:bg-white hover:text-[#ffc83a] hover:border-[#413e39]  hover:border-2 my-[2rem]'>Add to Cart</button>
+              <button onClick={addItemToCart} className='w-[314px] h-[70px] rounded-[30px] bg-[#ffc83a] hover:bg-white hover:text-[#ffc83a] hover:border-[#413e39]  hover:border-2 my-[2rem]'>Add to Cart</button>
             </Link>
 
       </div>
     </div>
-
-  
   );
-};
+}
 export default productDetails;
