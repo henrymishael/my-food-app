@@ -1,8 +1,8 @@
 'use client';
 import Image from 'next/image';
-import React, { useState } from 'react'
+import React from 'react'
 import { MdOutlineFavoriteBorder } from "react-icons/md";
-import { useParams, useRouter } from 'next/navigation';
+import { useParams} from 'next/navigation';
 import foodList from '@/app/fooditems';
 import Link from 'next/link';
 import BackArrow from '@/app/backarrow';

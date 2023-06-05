@@ -1,14 +1,12 @@
 'use client';
-import React, { useState } from 'react'
-import TryAgain from '../tryagain'
+import React from 'react'
 import BackArrow from '../backarrow';
 import Link from 'next/link';
 import { MdOutlineSwipeLeft } from "react-icons/md";
-import foodList from '../fooditems';
 import { useRecoilState } from 'recoil';
 import { cartState } from '../atoms/cartState';
 import Image from 'next/image';
-import { useParams } from 'next/navigation';
+
 
 
   
