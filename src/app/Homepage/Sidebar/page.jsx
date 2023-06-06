@@ -1,12 +1,10 @@
 import React from 'react'
-import {FiChevronLeft} from "react-icons/fi";
 import {BiUserCircle} from "react-icons/bi";
 import {BiCartDownload} from "react-icons/bi";
 import {MdOutlineLocalOffer} from "react-icons/md";
 import {IoDocumentTextOutline} from "react-icons/io5";
 import {MdOutlineSecurity} from "react-icons/md";
 import {BsArrowRight} from "react-icons/bs";
-//import Link from 'next/link';
 import '../../../app/globals.css'
 import BackArrow from '@/app/backarrow';
 import Link from 'next/link';

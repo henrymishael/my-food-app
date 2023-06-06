@@ -6,6 +6,7 @@ import {FiChevronRight} from 'react-icons/fi'
 import Link from 'next/link'
 
 export default function page() {
+    
   return (
     <div className='bg-[#f5f5f8] min-h-screen w-[100%] pt-8 px-8'>
         <div className='flex flex-row min-w-[186px] justify-between  text-[24px]'>

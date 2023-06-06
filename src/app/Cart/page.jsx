@@ -61,16 +61,16 @@ const handleCartClearance = () =>{
     </div>
     <div className='flex flex-col place-content-center text-center text-[17px] font-semibold h-[100%]'>
         <h2>{item.name && item.name.length > 15 ? item.name.substring(0,15) + '...' : item.name}</h2>
-        <h2 className='text-[#ffc83a] mt-0.5'>{item.price}</h2>
+        <h2 className='text-[#ffc83a] mt-0.5'>₦{item.price}</h2>
     </div>
     <div className='flex h-[100%]'>
         <div className='p-[.1rem] flex flex-row justify-around items-center w-[52px] bg-[#ffc83a] h-[20px] rounded-[30px] translate-y-[280%] font-semibold ' >
-            <button onClick={() => addItemToCart(item)}>
-                +
+            <button onClick={() => removeItemFromCart(item)}>
+                -
             </button>
             {item.quantity}
-            <button onClick={() => removeItemFromCart(item)}>-
-
+            <button onClick={() => addItemToCart(item)}>+
+            
             </button>
         </div>
     </div>
@@ -89,7 +89,7 @@ const handleCartClearance = () =>{
         </div>
         <div className='flex flex-row justify-center mt-[2.5rem]'>
             <span className='text-[20px] -rotate-45'><MdOutlineSwipeLeft/></span>
-            <h2 className='text-[10px]'>Swipe on an item todelete</h2>
+            <h2 className='text-[10px]'>Swipe on an item to delete</h2>
         </div>
         {cartItem.length >=1 && (
           <button onClick={handleCartClearance} className=' mt-2 translate-x-[200%] h-[40px] w-[100px] bg-[#ffc83a] rounded-[15px] font-semibold'>

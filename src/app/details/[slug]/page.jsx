@@ -59,7 +59,7 @@ const productDetails = ({params}) => {
       </div>
       <div className='flex flex-col items-center m-auto text-center  mt-[24px] w-[100%]'>
         <p className='text-[24px] font-semibold'>{product.name}</p>
-        <p className='text-[18px] font-bold pt-3 text-[#ffc83a]'>{product.price}</p>
+        <p className='text-[18px] font-bold pt-3 text-[#ffc83a]'>₦{product.price}</p>
       </div>
       <div className=' min-w-[314px] mt-[24px] m-auto border-b-2 border-black '>
         <h2 className='text-[15px] font-semibold'>Rating {product.rating}</h2>

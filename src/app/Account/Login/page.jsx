@@ -27,11 +27,11 @@ export default function page() {
         <div className='flex flex-col mt-[77px] items-center text-gray-400'>
           <div className='flex flex-col min-w-[314px] h-[59px] sm:w-[100%] md:w-[100%] lg:w-[100%]  '>
             <label className='text-[15px] pb-[10px]' for='Email' id='Email'>Email address</label> 
-            <input className='text-black text-[17px] border-b-[0.5px] border-black outline-none  bg-transparent ' type="text" for='Email' id='Email' /> <br/>
+            <input className='text-black text-[17px] border-b-[0.5px] border-black outline-none  bg-transparent ' type="text" for='Email' id='Email' required/> <br/>
           </div>
           <div className='flex flex-col min-w-[314px] h-[59px] pt-[46px] sm:w-[100%] md:w-[100%] lg:w-[100%]'>
             <label className='text-[15px] pb-[10px]' for='pass' id='pass'>Password </label> 
-            <input className='text-black text-[17px] border-b-[0.5px] border-black outline-none  bg-transparent' type="text" for='pass' id='pass' />
+            <input className='text-black text-[17px] border-b-[0.5px] border-black outline-none  bg-transparent' type="text" for='pass' id='pass' required/>
           </div>
         </div>
         <div className='flex flex-col mt-[90px] w-[314px] m-auto justify-center'>

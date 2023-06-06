@@ -18,6 +18,10 @@ export default function page() {
   ;
 
   const totalPrice = cartItem.reduce((price, item)=> price + item.quantity * item.price, 0)
+
+  function payment_confirmation() {
+    confirm(`Please confirm Payment ${totalPrice}`)
+  }
   
   return (
     <div className='bg-[#f5f5f8] min-h-screen w-[100%] pt-10 px-8'>
@@ -93,7 +97,7 @@ export default function page() {
             </form>
             <div className=' flex justify-center  text-[#ffffff]  py-6 '>
           <Link href='./success'>
-            <button className='w-[314px] h-[70px] lg:h-[80px] lg:w-[360px] xl:w-[380px] xl:h-[85px] rounded-[30px] bg-[#ffc83a] hover:bg-[#ffffff] hover:text-[#ffc83a] hover:border-white hover:border-2'>Proceed to payment</button>
+            <button onClick={payment_confirmation} className='w-[314px] h-[70px] lg:h-[80px] lg:w-[360px] xl:w-[380px] xl:h-[85px] rounded-[30px] bg-[#ffc83a] hover:bg-[#ffffff] hover:text-[#ffc83a] hover:border-white hover:border-2'>Proceed to payment</button>
           </Link>
         </div>
         </div>

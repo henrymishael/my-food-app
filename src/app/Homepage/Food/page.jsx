@@ -41,7 +41,7 @@ const homePage = () => {
         <div className='  flex text-center  w-[220px] h-[270px] bg-white rounded-[30px] '> 
             <div className='translate-y-[50%] m-auto text-center   font-semibold'>
                 <h1 className='text-[22px] ' >{foodItem.name} </h1>
-                <h2 className='pt-3 text-[17px] text-[#ffc83a]'>{foodItem.price}</h2>
+                <h2 className='pt-3 text-[17px] text-[#ffc83a]'>₦{foodItem.price}</h2>
             </div>
         </div>    
     </div> 
