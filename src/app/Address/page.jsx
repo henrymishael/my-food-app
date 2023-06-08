@@ -85,9 +85,7 @@ export default function () {
   const [newNumber, setNewNumber] = useState("")
   const [isEditing, setEditing] = useState(false)
 
-  function addName(name) {
-    alert(name)
-  }
+ 
   
    
 
@@ -114,7 +112,7 @@ export default function () {
                 <h4 className='text-[17px] font-semibold'>
                     Address details
                 </h4>
-                <button onClick={() => setEditing(true)} id="inputField" className='text-[15px] font-normal border-[.5px] border-white bg-black text-white w-20 h-8'>
+                <button onClick={() => setEditing(true)} id="inputField" className=' hover:bg-white hover:text-black rounded-[6px] text-[15px] font-normal border-[.5px] border-white bg-black text-white w-20 h-8'>
                     Edit
                 </button>
             </div>
@@ -138,7 +136,7 @@ export default function () {
                   <h4 className='text-[17px] font-semibold'>
                       Address details
                   </h4>
-                  <button id="inputField" className='text-[15px] font-normal border-[.5px] border-white bg-black text-white w-20 h-8' onClick={(handleSubmit)}>
+                  <button id="inputField" className='text-[15px] font-normal border-[.5px] border-white bg-black text-white w-20 h-8 hover:bg-white hover:text-black rounded-[6px]' onClick={(handleSubmit)}>
                       save
                   </button>
               </div>

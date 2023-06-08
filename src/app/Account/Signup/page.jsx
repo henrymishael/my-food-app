@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function page() {
   return (
-    <div className='h-[100%] w-[100%] px-6'>
+    <div className='min-h-screen w-[100%] px-6'>
       <div className=' bg-white  rounded-b-[30px] shadow-lg h-[329px] min-w-[300px] '>
         <div className='flex justify-center pt-20'>
         <Image src={logo} alt='my logo'/>
@@ -29,16 +29,16 @@ export default function page() {
         <label className='text-[15px] pb-[10px]' for='name' id='name'>Full Name</label> 
         <input className='text-black text-[17px] border-b-[0.5px] border-black outline-none  bg-transparent ' type="text" for='name' id='name' required /> <br/>
       </div>  
-      <div className='flex flex-col min-w-[314px] h-[59px] sm:w-[100%] md:w-[100%] lg:w-[100%] pt-[36px]  '>
+      <div className='flex flex-col min-w-[314px] h-[59px] sm:w-[100%] md:w-[100%] lg:w-[100%] mt-[36px]  '>
         <label className='text-[15px] pb-[10px]' for='Email' id='Email'>Email address</label> 
         <input className='text-black text-[17px] border-b-[0.5px] border-black outline-none  bg-transparent ' type="text" for='Email' id='Email' required /> <br/>
       </div>
-      <div className='flex flex-col min-w-[314px] h-[59px] sm:w-[100%] md:w-[100%] lg:w-[100%] pt-[76px]'>
+      <div className='flex flex-col min-w-[314px] h-[59px] sm:w-[100%] md:w-[100%] lg:w-[100%] mt-[36px]'>
         <label className='text-[15px] pb-[10px]' for='pass' id='pass'>Password </label> 
         <input className='text-black text-[17px] border-b-[0.5px] border-black outline-none  bg-transparent' type="text" for='pass' id='pass' required/>
       </div>
     </div>
-    <div className='flex flex-col mt-[90px] w-[314px] m-auto justify-center'>
+    <div className='flex flex-col mt-[50px] items-center '>
     <div className='text-black flex font-semibold  text-[17px] '>
         <h3>Already have an account?
           <Link href='./Account/Login'>
@@ -46,13 +46,13 @@ export default function page() {
           </Link>
         </h3>
     </div>
-      
+    </div>
       <div className='flex justify-center py-[4.5rem] text-white'>
             <Link href='./Homepage/Food'>
               <button className='  w-[314px] h-[70px]   rounded-[30px] bg-[#ffc83a] hover:bg-white hover:text-[#ffc83a] hover:border-[#ffc83a]  hover:border-2'>Sign up</button>
             </Link>
           </div>
-    </div>
+    
     </div>
      
     

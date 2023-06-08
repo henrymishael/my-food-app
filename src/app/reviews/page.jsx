@@ -6,11 +6,10 @@ import thumbs from '../../../public/images/thumbs.png'
 
 export default function page() {
   return (
-    <div className='h-[100%] w-[100%] bg-white pt-10'>
-        
-        <div className='flex flex-row  '>
-            <span className='text-[24px] font-semibold pl-[40px]'><BackArrow/></span>
-            <h2 className='text-[18px] font-semibold pl-[110px] '>Reviews</h2>
+    <div className='bg-[#f5f5f8] h-screen w-[100%] pt-10 px-8'>
+        <div className='flex flex-row min-w-[186px] justify-between  text-[24px]'>
+            <BackArrow/>
+            <h4 className=' mt-[-2px] m-auto font-semibold text-[18px]'>Reviews</h4>
         </div>
         <div className='flex flex-col pt-[190px] items-center '>
             <Image src={thumbs} alt='' w='121' h='121'/>

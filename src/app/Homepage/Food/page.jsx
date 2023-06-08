@@ -75,25 +75,25 @@ return (
             <input  className='bg-transparent h-[60px]  outline-none border-none placeholder:text-[14px]' type='text' placeholder='Search' />
             </div>
         </Link>
-        <div className='flex flex-row mt-[46px] justify-center text-[17px] font-semibold text-[#9a9a9d]'>
+        <div className='flex flex-row mt-[46px] px-2 justify-around text-[17px] font-semibold text-[#9a9a9d] w-[100%]'>
             <div>
-                <button className='min-w-[87px] border-b-2 border-[#ffc83a] text-[#ffc83a] p-1'>Foods
+                <button className='min-w-[87px] border-b-2 border-[#ffc83a] text-[#ffc83a] '>Foods
                 </button>
             </div>
             <div>
-                <button className='min-w-[87px] pl-5 p-1'>Drinks</button>
+                <button className='min-w-[87px] '>Drinks</button>
             </div>
             <div>
-                <button className='min-w-[87px] p-1 pl-5'>Snacks</button>
+                <button className='min-w-[87px] '>Snacks</button>
             </div>
             <div>
-                <button className='min-w-[87px] p-1 pl-5'>Sauce</button>
+                <button className='min-w-[87px] '>Sauce</button>
             </div> 
         </div>
-        <div className='overflow-x-auto flex flex-row scrollbar-hide'>
+        <div className='overflow-x-auto flex flex-row scrollbar-none'>
             {menus}
         </div>
-        <div className='flex flex-row my-8 h-[40px] translate-y-[50%] justify-around text-[28px] text-[#adadaf]'>
+        <div className='flex flex-row my-8 h-[100px] items-center justify-around text-[28px] text-[#adadaf]'>
            <span className='text-[#ffc83a] shadow-[#ffc83a]'> 
             <AiFillHome/> 
            </span>

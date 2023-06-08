@@ -16,11 +16,11 @@ export default function page() {
    
     const [cartItem, setCartItem] = useRecoilState(cartState)
   ;
-
+// to calculate price of items in cart
   const totalPrice = cartItem.reduce((price, item)=> price + item.quantity * item.price, 0)
 
   function payment_confirmation() {
-    confirm(`Please confirm Payment ${totalPrice}`)
+    confirm(`Please confirm Payment ₦${totalPrice}`)
   }
   
   return (
@@ -90,7 +90,7 @@ export default function page() {
                 </div>
                 <div className='flex flex-row justify-between mt-6'>
                     <h3 className='text-[20px] font-bold'>Total</h3>
-                    <h1 className='text-[22px] font-semibold'>{totalPrice}</h1>
+                    <h1 className='text-[22px] font-semibold'>₦{totalPrice}</h1>
                 </div>
             </div>
             </fieldset>

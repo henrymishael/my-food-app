@@ -74,9 +74,9 @@ const productDetails = ({params}) => {
           <p>All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately.</p>
         </div>
       </div>
-      <div className='flex justify-center  text-white '>
+      <div className='flex justify-center  text-white my-5'>
             <Link href='./Cart'>
-              <button onClick={addItemToCart} className='w-[314px] h-[70px] rounded-[30px] bg-[#ffc83a] hover:bg-white hover:text-[#ffc83a] hover:border-[#413e39]  hover:border-2 my-[2rem]'>Add to Cart</button>
+              <button onClick={addItemToCart} className='w-[314px] h-[70px] rounded-[30px] bg-[#ffc83a] hover:bg-white hover:text-[#ffc83a] hover:border-[#413e39]  hover:border-2 '>Add to Cart</button>
             </Link>
 
       </div>

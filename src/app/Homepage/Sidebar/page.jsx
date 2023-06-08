@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 export default function sideBar() {
   return (
-    <div className='bg-[#ffc83a] h-[100%] pl-[40px] slide-in w-[100%]'>
+    <div className='bg-[#ffc83a] min-h-screen pl-[40px] slide-in w-[100%]'>
         <div className=' text-[24px] pt-[50px] font-bold  '>
             <BackArrow />
         </div> 

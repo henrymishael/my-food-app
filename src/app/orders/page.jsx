@@ -5,10 +5,10 @@ import BackArrow from '../backarrow';
 
 export default function page() {
   return (
-    <div className='min-h-screen w-[100%] bg-white pt-10 '>
-        <div className='flex flex-row  '>
-            <span className='text-[24px] font-semibold pl-[40px]'><BackArrow/></span>
-            <h2 className='text-[18px] font-semibold pl-[110px] '>Orders</h2>
+    <div className='min-h-screen min-w-[100%] bg-white pt-10 px-8'>
+        <div className='flex flex-row min-w-[186px] justify-between  text-[24px]'>
+        <BackArrow/>
+        <h1 className=' mt-[-2px] m-auto font-semibold text-[18px]'>Orders</h1>
         </div>
         <div className='flex flex-col pt-[190px] items-center '>
             <span className='text-[106px] text-[#c7c7c7]'><CgShoppingCart/></span>
