@@ -25,7 +25,7 @@ export default function page() {
         <p className='pt-6 text-[20px] font-semi
         '>Ratings 5.0 ⭐⭐⭐⭐⭐</p>
         <div className='flex flex-row items-center  w-[100%] bg-[#fbfbf3] rounded-[15px] mt-4 pl-4 m-auto '>
-                <input onChange={handleChange} className='bg-transparent h-[60px]  outline-none border-none placeholder:text-[14px]' type='text' placeholder='Reviews' />
+                <input className='bg-transparent h-[60px]  outline-none border-none placeholder:text-[14px]' type='text' placeholder='Reviews' />
             </div>
       </div>
       <div className='flex flex-row justify-around py-10'>
