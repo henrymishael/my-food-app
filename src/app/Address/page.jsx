@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import BackArrow from '../backarrow'
 import Link from 'next/link'
 
@@ -79,25 +79,46 @@ export default function () {
   //   var number = document.getElementById('input2').Placeholder
   // }
 
-  const [name, setName] = useState("")
-  const [newName, setNewName] = useState("")
-  const [newAddress, setNewAddress] = useState("")
-  const [newNumber, setNewNumber] = useState("")
+  // const [name, setName] = useState("")
+  const [newName, setNewName] = useState("Henry Mishael")
+  const [newAddress, setNewAddress] = useState("Surulere, Lagos")
+  const [newNumber, setNewNumber] = useState("+2348115173291")
   const [isEditing, setEditing] = useState(false)
 
- 
+ useEffect(() => {
+  const savedProfileName = localStorage.getItem('newName')
+  if (savedProfileName){
+    setNewName(savedProfileName)
+  }
+  
+  const savedProfileAddress = localStorage.getItem('newAddress')
+  if (savedProfileAddress){
+    setNewAddress(savedProfileAddress)
+  }
+
+  const savedProfileNumber = localStorage.getItem('newNumber')
+  if (savedProfileNumber){
+    setNewNumber(savedProfileNumber)
+  }
+ })
   
    
 
   function handleChange(e) {
-    setNewName(e.target.value);
+    const name = e.target.value
+    setNewName(name);
+    localStorage.setItem('newName', name)
   }
   function handleChange1(e) {
-    setNewAddress(e.target.value);
+    const address = e.target.value
+    setNewAddress(address);
+    localStorage.setItem('newAddress', address)
   }
 
   function handleChange2(e) {
-    setNewNumber(e.target.value);
+    const number = e.target.value
+    setNewNumber(number);
+    localStorage.setItem('newNumber', number)
   }
 
   function handleSubmit() {
@@ -165,7 +186,7 @@ export default function () {
             {isEditing ? editingTemplate : viewTemplate}
         </div>
         <div className=' flex justify-center  text-[#ffffff]  py-10'>
-          <Link href='./checkout'>
+          <Link href='./map'>
             <button className='w-[314px] h-[70px] lg:h-[80px] lg:w-[360px] xl:w-[380px] xl:h-[85px] rounded-[30px] bg-[#ffc83a] hover:bg-[#ffffff] hover:text-[#ffc83a] hover:border-white hover:border-2'>Confirm Address</button>
           </Link>
         </div>

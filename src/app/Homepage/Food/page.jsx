@@ -49,15 +49,15 @@ const homePage = () => {
 return (
 
     <div className='w-[100%] min-h-screen pt-[2.5rem]'>
-        <div className=' text-2xl flex flex-row justify-between m-auto w-[100%] px-8 '>
+        <div className=' text-[32px] flex flex-row justify-between m-auto w-[100%] px-8 '>
             <Link href='./Homepage/Sidebar'>
                 <RxHamburgerMenu/>
             </Link>
             <div className='relative'>
             <Link href='../../Cart'>
-            <div >
+            <div className='' >
                 <CgShoppingCart/>{cartItem.length >= 1 ?
-                <span className=' absolute -top-1 left-3 text-[13px] bg-red-600 h-[16px] w-[16px] rounded-full flex items-center justify-center text-white font-semibold '>{cartItem.length}</span>: []}
+                <span className=' absolute -top-1 left-4 text-[13px] bg-red-600 h-[18px] w-[18px] rounded-full flex items-center justify-center text-white font-semibold '>{cartItem.length}</span>: []}
                 
             </div>
             </Link>

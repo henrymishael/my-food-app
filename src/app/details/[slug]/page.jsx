@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import React from 'react'
+import React, { useEffect } from 'react'
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { useParams} from 'next/navigation';
 import foodList from '@/app/fooditems';
@@ -12,6 +12,18 @@ import { cartState } from '@/app/atoms/cartState';
 
 const productDetails = ({params}) => {
   const [cartItem, setCartItem] = useRecoilState(cartState)
+  useEffect(() => {
+    // Load cart items from local storage when the component mounts
+    const savedCartItems = localStorage.getItem('cartItem');
+    if (savedCartItems) {
+      setCartItem(JSON.parse(savedCartItems));
+    }
+  }, []);
+
+  useEffect(() => {
+    // Save cart items to local storage whenever they change
+    localStorage.setItem('cartItem', JSON.stringify(cartItem));
+  }, [cartItem]);
  
  
   const router = useParams();

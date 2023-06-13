@@ -97,7 +97,7 @@ export default function page() {
             </form>
             <div className=' flex justify-center  text-[#ffffff]  py-6 '>
           <Link href='./success'>
-            <button onClick={payment_confirmation} className='w-[314px] h-[70px] lg:h-[80px] lg:w-[360px] xl:w-[380px] xl:h-[85px] rounded-[30px] bg-[#ffc83a] hover:bg-[#ffffff] hover:text-[#ffc83a] hover:border-white hover:border-2'>Proceed to payment</button>
+            <button onClick={payment_confirmation} className='w-[314px] h-[70px] lg:h-[80px] lg:w-[360px] xl:w-[380px] xl:h-[85px] rounded-[30px] bg-[#ffc83a] hover:bg-[#ffffff] hover:text-[#ffc83a] hover:border-white hover:border-2'>Pay Now</button>
           </Link>
         </div>
         </div>
