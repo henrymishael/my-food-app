@@ -1,23 +1,12 @@
-'use client';
-import React, { useEffect, useState } from 'react'
+
+import React from 'react'
 import BackArrow from '../backarrow'
 import Image from 'next/image'
 import complete from '../../../public/images/complete.gif'
 import Link from 'next/link'
 
 export default function page() {
-  const [review, setReview] = useState("")
-  useEffect(() => {
-    const savedReview = localStorage.getItem('review')
-    if (savedReview){
-      setReview(savedReview)
-    }})
-
-    function handleChange(e) {
-      const Review = e.target.value
-      setReview(Review);
-      localStorage.setItem('review', Review)
-    }
+  
   return (
     <div className='bg-white min-h-screen w-[100%] pt-8 px-8'>
       <div className='flex flex-row min-w-[186px] justify-between  text-[24px]'>
