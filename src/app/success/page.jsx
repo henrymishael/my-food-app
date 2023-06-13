@@ -1,10 +1,23 @@
-import React from 'react'
+'use client';
+import React, { useEffect, useState } from 'react'
 import BackArrow from '../backarrow'
 import Image from 'next/image'
 import complete from '../../../public/images/complete.gif'
 import Link from 'next/link'
 
 export default function page() {
+  const [review, setReview] = useState("")
+  useEffect(() => {
+    const savedReview = localStorage.getItem('review')
+    if (savedReview){
+      setReview(savedReview)
+    }})
+
+    function handleChange(e) {
+      const Review = e.target.value
+      setReview(Review);
+      localStorage.setItem('review', Review)
+    }
   return (
     <div className='bg-white min-h-screen w-[100%] pt-8 px-8'>
       <div className='flex flex-row min-w-[186px] justify-between  text-[24px]'>
@@ -15,15 +28,15 @@ export default function page() {
             ORDER COMPLETED
         </h1>
       </div>
-      <div className='mt-16 flex justify-center'>
-        <Image src={complete} width={250} height={250} ></Image>
+      <div className='mt-10 flex justify-center'>
+        <Image src={complete} width={300} height={300} ></Image>
       </div>
       <div className='flex flex-col items-center'>
         <h1 className='text-[17px] font-semibold'>Review</h1>
         <p className='pt-6 text-[20px] font-semi
         '>Ratings 5.0 ⭐⭐⭐⭐⭐</p>
         <div className='flex flex-row items-center  w-[100%] bg-[#fbfbf3] rounded-[15px] mt-4 pl-4 m-auto '>
-                <input  className='bg-transparent h-[60px]  outline-none border-none placeholder:text-[14px]' type='text' placeholder='Reviews' />
+                <input onChange={handleChange} className='bg-transparent h-[60px]  outline-none border-none placeholder:text-[14px]' type='text' placeholder='Reviews' />
             </div>
       </div>
       <div className='flex flex-row justify-around py-10'>

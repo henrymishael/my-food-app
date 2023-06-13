@@ -40,6 +40,7 @@ export default function
           return prevState.map((item) => {
             return item.id === productItem.id? {...item, quantity: item.quantity + 1} : item
           })
+          
         })
       }
       }
@@ -94,7 +95,7 @@ const handleCartClearance = () =>{
     
     return (
     
-    <div className='bg-[#f5f5f8] h-screen w-[100%] pt-10 px-8'>
+    <div className='bg-[#f5f5f8]  min-h-screen w-[100%] pt-10 px-8'>
         <div className='flex flex-row min-w-[186px] justify-between  text-[24px]'>
             <BackArrow/>
             <h4 className=' mt-[-2px] m-auto font-semibold text-[18px]'>Cart</h4>
