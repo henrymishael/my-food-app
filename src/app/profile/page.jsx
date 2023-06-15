@@ -70,7 +70,7 @@ export default function page() {
             <h1 className='font-semibold text-[18px]'>
                 Personal details
             </h1>
-                <h1 className='flex hover:bg-white hover:text-black rounded-[6px] text-[15px] font-normal border-[.5px] border-white bg-black text-white w-20 h-8 cursor-pointer justify-center' onClick={()=> setEditing(true)}>
+                <h1 className='flex hover:bg-white hover:text-black rounded-[6px] text-[15px] font-normal border-[.5px] border-white bg-black text-white w-20 h-8 cursor-pointer justify-center item-center' onClick={()=> setEditing(true)}>
                     Edit
                 </h1>
         </div>
@@ -104,7 +104,7 @@ export default function page() {
             <h1 className='font-semibold text-[18px]'>
                 Personal details
             </h1>
-                <h1 className='flex hover:bg-white hover:text-black rounded-[6px] text-[15px] font-normal border-[.5px] border-white bg-black text-white w-20 h-8 cursor-pointer justify-center' onClick={()=> setEditing(false)}>
+                <h1 className='flex hover:bg-white hover:text-black rounded-[6px] text-[15px] font-normal border-[.5px] border-white bg-black text-white w-20 h-8 cursor-pointer justify-center items-center' onClick={()=> setEditing(false)}>
                     save
                 </h1>
         </div>
@@ -132,7 +132,7 @@ export default function page() {
     )
     
   return (
-    <div className='bg-[#f5f5f8] min-h-screen w-[100%] pt-8 px-8'>
+    <div className='flex flex-col bg-[#f5f5f8] min-h-screen w-[100%] pt-8 px-8'>
         <div className='flex flex-row min-w-[186px] justify-between  text-[24px]'>
             <BackArrow/>
         </div>
@@ -143,7 +143,7 @@ export default function page() {
         </div>
         {isEditing ? editTemplate : viewTemplate}
         <Link href='./orders'>
-        <div className='flex items-center justify-between min-w-[315px] h-16 bg-white rounded-[30px] px-4 mt-6 shadow-xl'>
+        <div className='flex items-center justify-between min-w-[315px] h-16 bg-white rounded-[30px] px-4 mt-6 shadow-sm'>
             <h2 className='font-semibold text-[18px]'>Orders</h2>
                 <span className='text-[24px]'>
                     <FiChevronRight/>
@@ -151,7 +151,7 @@ export default function page() {
         </div>
         </Link>
         <Link href='./reviews'>
-        <div className='flex items-center justify-between min-w-[315px] h-16 bg-white rounded-[30px] px-4 mt-6 shadow-xl'>
+        <div className='flex items-center justify-between min-w-[315px] h-16 bg-white rounded-[30px] px-4 mt-6 shadow-sm'>
             <h2 className='font-semibold text-[18px]'>
                     Pending reviews
             </h2>
@@ -160,19 +160,19 @@ export default function page() {
                 </span>
         </div>
         </Link>
-        <div className='flex items-center justify-between min-w-[315px] h-16 bg-white rounded-[30px] px-4 mt-6 shadow-xl'>
+        <div className='flex items-center justify-between min-w-[315px] h-16 bg-white rounded-[30px] px-4 mt-6 shadow-sm'>
             <h2 className='font-semibold text-[18px]'>Faq</h2>
             <span className='text-[24px]'>
                     <FiChevronRight/>
             </span>
         </div>
-        <div  className='flex items-center justify-between min-w-[315px] h-16 bg-white rounded-[30px] px-4 mt-6 shadow-xl'>
+        <div  className='flex items-center justify-between min-w-[315px] h-16 bg-white rounded-[30px] px-4 mt-6 shadow-sm'>
             <h2 className='font-semibold text-[18px]'>Help</h2>
             <span className='text-[24px]'>
                     <FiChevronRight/>
             </span>
         </div>
-        <div className='flex flex-row my-8 h-[100px] items-center justify-around text-[28px] text-[#adadaf]'>
+        <div className='mt-auto flex flex-row my-8 h-[100px] items-center justify-around text-[28px] text-[#adadaf]'>
             <span>
                 <AiOutlineHome/> 
             </span>
