@@ -70,7 +70,7 @@ export default function page() {
             <h1 className='font-semibold text-[18px]'>
                 Personal details
             </h1>
-                <h1 className='flex hover:bg-white hover:text-black rounded-[6px] text-[15px] font-normal border-[.5px] border-white bg-black text-white w-20 h-8 cursor-pointer justify-center item-center' onClick={()=> setEditing(true)}>
+                <h1 className='flex hover:bg-white hover:text-black rounded-[6px] text-[15px] font-normal border-[.5px] border-white bg-black text-white w-20 h-8 cursor-pointer justify-center items-center' onClick={()=> setEditing(true)}>
                     Edit
                 </h1>
         </div>
@@ -173,9 +173,11 @@ export default function page() {
             </span>
         </div>
         <div className='mt-auto flex flex-row my-8 h-[100px] items-center justify-around text-[28px] text-[#adadaf]'>
+            <Link href='../Homepage'>
             <span>
                 <AiOutlineHome/> 
             </span>
+            </Link>
             <span>
                 <MdOutlineFavoriteBorder/>
            </span>
