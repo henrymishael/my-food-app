@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: #ffffff;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: #ffffff;
+    --background-start-rgb: 255,255, 255;
+    --background-end-rgb: 255, 255, 255;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+
+.slide-in {
+  animation: slide-in 0.5s ease-out forwards;
+
+}
+@keyframes slide-in {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0%);
+      opacity: 1;
+  }
+}
+.slide-out {
+  animation: slide-in 0.5s ease-out forwards;
+
+}
+@keyframes slide-out {
+  from {
+      transform: translateX(0%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(-100%);
+      opacity: 1;
+  }
+}
+
+.move-up {
+  animation: move-up 0.5s ease-out forwards;
+
+}
+@keyframes move-up {
+  from {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0%);
+      opacity: 1;
+  }
+}
